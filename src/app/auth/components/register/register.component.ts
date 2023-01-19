@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 
 import { select, Store } from "@ngrx/store";
 import { Observable } from "rxjs";
-import { register } from "../../store/actions";
+import { registerAction } from "../../store/actions/actions";
 import { isSubmittingSelector } from "../../store/selectors";
 
 @Component({
@@ -37,6 +37,6 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): void {
     console.warn(this.form.value);
-    this.store.dispatch(register(this.form.value));
+    this.store.dispatch(registerAction(this.form.value));
   }
 }
