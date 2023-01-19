@@ -4,7 +4,6 @@ import { register } from "./actions";
 
 const initialState: AuthStateInterface = {
   isSubmitting: false,
-  idrees: true,
 };
 
 const authReducer = createReducer(
